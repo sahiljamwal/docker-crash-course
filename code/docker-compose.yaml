@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  node-api:
+    build: ./docker-node-api
+    container_name: myapp_c1
+    ports:
+      - "3000:4000"
+    volumes:
+      - ./docker-node-api:/app
+      - /app/node_modules
